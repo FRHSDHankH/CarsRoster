@@ -1,0 +1,75 @@
+@font-face {
+  font-family: font;
+  src: url(cross-boxed/Cross\ Boxed.ttf);
+}
+
+.font {
+  font-family: font;
+}
+
+.bg-333 {
+  background-color: #333;
+}
+
+.bg-666 {
+  background-color: #666;
+}
+
+.scale {
+  transition: 0.2s;
+}
+
+.scale:hover {
+  scale: 1.1;
+}
+
+.scale:active {
+  scale: 1;
+}
+
+.size {
+  height: 100vh;
+  width: 100vw;
+}
+
+.slideDown {
+  transform: translateY(0vh);
+  transition: transform 2s, scale 0.2s;
+  @starting-style {
+    transform: translateY(-100vh);
+  }
+}
+
+.slideUp {
+  transform: translateY(0vh);
+  transition: transform 2s, scale 0.2s;
+  @starting-style {
+    transform: translateY(100vh);
+  }
+}
+
+.slideLeft {
+  transform: translateX(0vw);
+  transition: transform 2s, scale 0.2s;
+  @starting-style {
+    transform: translateX(100vw);
+  }
+}
+
+.slideRight {
+  transform: translateX(0vw);
+  transition: transform 2s, scale 0.2s;
+  @starting-style {
+    transform: translateX(-100vw);
+  }
+}
+
+.fadeIn {
+  scale: 1;
+  opacity: 1;
+  transition: 2s;
+  @starting-style {
+    scale: 0.5;
+    opacity: 0.5;
+  }
+}

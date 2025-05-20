@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <title>Car Showcase</title>
+    <title>Home</title>
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta
@@ -16,15 +16,23 @@
       integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="style.css">
   </head>
 
-  <body>
-    <header>
-      <!-- place navbar here -->
-    </header>
-    <main></main>
+  <body class="overflow-hidden bg-333">
+    <main>
+      <div class="container d-flex align-items-center justify-content-center size text-center fadeIn">
+        <div class="container d-block">
+          <button class="btn btn-transparent rounded border border-1 border-white text-white scale d-flex align-items-center justify-content-center pb-0 px-5 pt-4" onclick="location.href = 'roster.html'">
+            <p class="display-1 font">Enter Car Showcase</p>
+          </button>
+        </div>
+      </div>
+    </main>
     <footer>
-      <!-- place footer here -->
+      <div class="bg-transparent d-flex justify-content-center align-items-center text-white text-center display-6 fixed-bottom border-top border-white border-2">
+        ©2025 HBTJ Inc.
+      </div>
     </footer>
     <!-- Bootstrap JavaScript Libraries -->
     <script
@@ -38,5 +46,6 @@
       integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
       crossorigin="anonymous"
     ></script>
+    <script src="js/index.js"></script>
   </body>
 </html>
