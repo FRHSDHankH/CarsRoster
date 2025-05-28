@@ -36,14 +36,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
     players.forEach(p => {
       const modal = document.createElement('div')
-      modal.className = 'rounded w-75 font display-4 text-white text-center mx-auto border border-1 border-white bg-transparent d-none fadeIn'
+      modal.className = 'rounded w-75 font display-4 text-white text-center mx-auto border border-1 border-white bg-transparent d-none fadeIn p-5'
       modal.id = p.idName
       modal.innerHTML = `
         ${p.make} ${p.model} Fun Fact:<br>
         <span class="fs-4">
           ${p.funFact}
         </span><br>
-        <button onclick="close('${p.idName}')" class='fs-2 text-white bg-transparent border border-1 border-white scale rounded text-center'>Close</button>
+        <button onclick="close('${p.idName}')" class='fs-2 text-white bg-transparent border border-1 border-white scale rounded text-center p-3'>Close</button>
       `
       modals.appendChild(modal);
     });
