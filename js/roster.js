@@ -1,7 +1,25 @@
+function show(make) {
+  const car = document.getElementById(make)
+  car.classList.add('d-block')
+  car.classList.remove('d-none')
+  document.getElementById('unHideFr').classList.remove('d-none')
+  document.getElementById('hideFr').classList.add('d-none')
+}
+
+function close(make) {
+  const car = document.getElementById(make)
+  car.classList.remove('d-block')
+  car.classList.add('d-none')
+  document.getElementById('unHideFr').classList.add('d-none')
+  document.getElementById('hideFr').classList.remove('d-none')
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   const carousel = document.getElementById("addItems");
+  const modals = document.getElementById('modals')
   const render = (players) => {
     carousel.innerHTML = "";
+    modals.innerHTML = "";
     players.forEach((p, index) => {
       const item = document.createElement("div");
       item.className = "carousel-item text-center" + (index === 0 ? " active" : "");
@@ -10,11 +28,24 @@ document.addEventListener("DOMContentLoaded", () => {
           <img src="${p.photo}" class="card-img-top img-fluid mx-auto w-50">
           <div class="card-body">
             <p class="card-title display-4">${p.make} ${p.model}</p>
-            <button onclick="" class="btn btn-transparent text-white border border-1 border-white text-center display-6 scale">More Info</button>
+            <button onclick="show('${p.idName}')" class="btn btn-transparent text-white border border-1 border-white text-center display-6 scale">More Info</button>
           </div>
-        </div>
-  `;
+        </div>`;
       carousel.appendChild(item);
+    });
+
+    players.forEach(p => {
+      const modal = document.createElement('div')
+      modal.className = 'rounded w-75 font display-4 text-white text-center mx-auto border border-1 border-white bg-transparent d-none fadeIn'
+      modal.id = p.idName
+      modal.innerHTML = `
+        ${p.make} ${p.model} Fun Fact:<br>
+        <span class="fs-4">
+          ${p.funFact}
+        </span><br>
+        <button onclick="close('${p.idName}')" class='fs-2 text-white bg-transparent border border-1 border-white scale rounded text-center'>Close</button>
+      `
+      modals.appendChild(modal);
     });
   };
 

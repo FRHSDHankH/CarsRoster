@@ -21,7 +21,7 @@
 
   <body class="overflow-hidden bg-333">
     <main>
-      <div class="container size d-flex align-items-center justify-content-center fadeIn">
+      <div class="container size d-flex align-items-center justify-content-center position-absolute top-50 start-50 translate-middle z-0" id="hideFr">
         <div class="container d-block">
           <div id="carouselExample" class="carousel slide">
             <div class="carousel-inner" id="addItems">
@@ -37,6 +37,9 @@
             </button>
           </div>
         </div>
+      </div>
+      <div class="container size d-flex align-items-center justify-content-center position-absolute top-50 start-50 translate-middle z-3 d-none" id="unHideFr">
+        <div class="container d-block" id="modals"></div>
       </div>
     </main>
     <footer>
