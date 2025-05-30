@@ -7,7 +7,6 @@ function show(make) {
 }
 
 function close(make) {
-  console.log("i work");
   const car = document.getElementById(make);
   car.classList.remove("d-block");
   car.classList.add("d-none");
