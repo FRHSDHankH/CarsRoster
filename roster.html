@@ -61,5 +61,13 @@
     ></script>
     <script src="js/roster.js"></script>
     <script src="js/players.js"></script>
+    <script>function close(make) {
+  console.log('i work')
+  const car = document.getElementById(make)
+  car.classList.remove('d-block')
+  car.classList.add('d-none')
+  document.getElementById('unHideFr').classList.add('d-none')
+  document.getElementById('hideFr').classList.remove('d-none')
+}</script>
   </body>
 </html>
